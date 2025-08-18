@@ -365,7 +365,7 @@ form .generate-ticket:hover{
 }
 
 .display-data .ticket-container .ticket-user img{
-    width: 65px;
+    width: 60px;
     border-radius: .75rem;
 }
 
@@ -457,3 +457,23 @@ form .generate-ticket:hover{
 
     
 }
+
+@media (max-width: 360px) {
+    .display-data .ticket-container .date{
+        max-width: 200px;
+    }
+
+    .display-data .ticket-container .date{
+    margin-bottom: 0rem;
+    
+}
+}   
+
+@media (max-width:410px) {
+     .display-data .ticket-container .date{
+        max-width: 200px;
+    }
+
+    .display-data .ticket-container .date{
+    margin-bottom: 0rem;
+}}
