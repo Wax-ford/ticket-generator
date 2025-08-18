@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="[Inconsolata](https://fonts.google.com/specimen/Inconsolata)">
+  
+  <title>Conference ticket generator</title>
+
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="image-container">
+    <div class="svg-image">
+      <img src="./assets/images/pattern-lines.svg" alt="">
+    </div>
+    <div class="svg-image">
+      <img src="./assets/images/pattern-squiggly-line-top.svg" alt="">
+    </div>
+    <div class="svg-image">
+      <img src="./assets/images/pattern-squiggly-line-bottom-desktop.svg" alt="">
+    </div>
+    <div class="svg-image">
+      <img src="./assets/images/pattern-circle.svg" alt="">
+    </div>
+    <div class="svg-image">
+      <img src="./assets/images/pattern-circle.svg" alt="">
+    </div>
+    </div>
+    <div class="content-container">
+      <div id="form-content" class="form-content">
+        <img class="logo" src="./assets/images/logo-full.svg" alt="">
+
+      <div class="headings">
+        <h1>Your Journey To Coding Conf 2025 Starts Here!</h1>
+        <p>Secure your spot at this year's biggest coding Conference.</p>
+      </div>
+
+      <form id="ticket-form">
+        <div class="form-item">
+          <label for="file-input">Upload Avatar</label>
+          <div id="drop-area" class="upload-box">
+            <input type="file" id="file-input" class="file-input" accept="image/png, image/jpeg">
+            <div class="up-img"><img id="uploaded-image" class="uploaded-image" src="./assets/images/icon-upload.svg" alt=""></div>
+            <div id="message-action" class="message-action">Drag and drop or click to upload</div>
+            <div id="file-actions" class="file-actions">
+              <button type="button" id="remove-image">Remove image</button>
+              <button type="button" id="change-image">Change image</button>
+            </div>
+          </div>
+          <div id="upload-hint" class="upload-hint">
+            <img src="images/icon-info.svg" alt="check icon"> Upload your photo(JPG or PNG, max size: 500KB).
+          </div>
+        </div>
+
+
+        <div class="form-item">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-namme" class="required">
+          <p class="text-hint">
+            <!--svj icon-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              <polyline points="11 8 11 10 13 10"></polyline>
+            </svg>
+            Please enter your full name.
+          </p>
+        </div>
+        <div class="form-item">
+          <label for="emai">Email Address</label>
+          <input type="email" id="email" class="required">
+          <p class="text-hint">
+            <!--svj icon-->
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              <polyline points="11 8 11 10 13 10"></polyline>
+            </svg>
+            Please enter a valid email address.
+          </p>
+        </div>
+        <div class="form-item">
+          <label for="github">Github Username</label>
+          <input type="text" id="github" class="required">
+          <p class="text-hint">
+            <!--svj icon-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-info">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              <polyline points="11 8 11 10 13 10"></polyline>
+            </svg>
+            Please enter a valid username.
+            </p>
+        </div>
+
+        <button type="submit" id="generate-ticket" class="generate-ticket">Generate My Ticket</button>
+        
+      </form>
+      </div>
+
+      <div id="display-data" class="display-data">
+        <img class="logo" src="./assets/images/logo-full.svg" alt="">
+        <div class="headings">
+
+          <h1>Congrats, <span id="header-name" class="gradient-text"></span>! Your Ticket is ready.</h1>
+          <p>We've emailed your ticket to <span id="display-email" class="header-email"></span> and will send updates in the run up to the event.</p>
+
+      </div>
+      <div class="ticket-container">
+        <div class="logo">
+          <img src="./assets/images/logo-mark.svg" alt="">
+          Coding conf
+        </div>
+
+        <p class="date">December 10, 2025 /Austin Tx</p>
+
+        <div class="ticket-user">
+          <img id="display-image" src="" alt="">
+          <div class="user-info">
+            <span id="display-name"></span>
+            <div class="github-username">
+            <img src="./assets/images/icon-github.svg" alt="">
+            <span id="display-github"></span>
+            </div>
+          </div>
+        </div>
+
+        <p class="ticket-number">#01609</p>
+      </div>
+
+  </div>
+  </div>
+  
+  <script type="module" src="ticket.js"></script>
+</body>
+</html>
